@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="../js/cookie.js"></script>
+
+<body>
+    <h2>欢迎光临:<span></span></h2>
+</body>
+<script>
+    var name1 = getCookie('name');
+    if (name1) {
+        var span1 = document.querySelector('span');
+        span1.innerHTML = decodeURI(name1);
+    } else {
+        alert("请登录后再进入！！！");
+        location = './login.html';
+    }
+</script>
+
+</html>
